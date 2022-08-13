@@ -1,0 +1,19 @@
+<div class="game-card">
+  <div class="card-content">
+    <div *ngIf="jackpot" class="top-content">£{{ jackpot.amount }}</div>
+    <img class="card-thumbnail" [src]="game.image" />
+
+    <div class="bottom-content">
+      <p class="game-title">{{ game.name }}</p>
+      <button class="play-btn">Play</button>
+    </div>
+
+    <ng-container *ngIf="ribbons.length === 2">
+      <div class="ribbon">{{ ribbons[0] }}</div>
+      <div class="ribbon2">{{ ribbons[1] }}</div>
+    </ng-container>
+    <ng-container *ngIf="ribbons.length === 1">
+      <div class="ribbon">{{ ribbons[0] }}</div>
+    </ng-container>
+  </div>
+</div>

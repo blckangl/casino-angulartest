@@ -1,0 +1,8 @@
+.game-list{
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 154px));
+  grid-gap: 32px;
+  align-items: center;
+  justify-content: space-evenly;
+}

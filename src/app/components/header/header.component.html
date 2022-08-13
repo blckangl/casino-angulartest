@@ -1,0 +1,44 @@
+<header>
+  <div (click)="toggleMenu()" class="menu">
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+  </div>
+  <div
+    (click)="toggleMenu()"
+    [ngClass]="{ open: isOpen }"
+    class="nav-container"
+  >
+    <div
+      [routerLink]="['', 'new']"
+      routerLinkActive="active"
+      class="nav-element"
+    >
+      New Games
+    </div>
+    <div
+      class="nav-element"
+      [routerLink]="['', 'top']"
+      routerLinkActive="active"
+    >
+      Top Games
+    </div>
+
+    <ng-container *ngFor="let item of categories">
+      <div
+        [routerLink]="['', item.toLowerCase()]"
+        class="nav-element"
+        routerLinkActive="active"
+      >
+        {{ item }}
+      </div></ng-container
+    >
+    <div
+      [routerLink]="['', 'other']"
+      class="nav-element"
+      routerLinkActive="active"
+    >
+      Other
+    </div>
+  </div>
+</header>
